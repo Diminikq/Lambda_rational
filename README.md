@@ -16,3 +16,8 @@ Altough lambda is not an involution, since lambda(lambda(10))=lambda(1)=1, not 1
 The second option seems better compared to the original function. However, lambda(12) becomes 2.1 instead of 21, but stays involution:
 
 $$\lambda(x) = \text{sgn}(x) \cdot \sum_{k=-\infty}^{\infty} \left( \lfloor |x| \cdot 10^{-k} \rfloor \pmod{10} \right) \cdot 10^{-k}$$
+
+In plain words, the first definition works on integers Z and feels intuitive, but is not an involution (not even on integers - anything ending in 0 breaks it). The second definition is not as intuitive (12->2.1), but is an involution
+over the rationals.
+
+lambda_rationals.py is an implementation of the first definition.
